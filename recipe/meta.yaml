@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "pyjanitor" %}
-{% set version = "0.32.29" %}
+{% set version = "0.32.35" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/pyjanitor-devs/pyjanitor/archive/v{{ version }}.tar.gz
-  sha256: cea2e253d06ebffde364876ddf96d1951097db15930840477880002b60126b0c
+  sha256: 545508aca666c389e05a3f7e0b2e2f613d76902262af4ec9800a0219eac5292c
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - pip
   run:
-    - janitor-rs >=0.6.1,<0.7
+    - janitor-rs ==0.6.2
     - python >={{ python_min }}
     - pandas-flavor >=0.8.1,<0.9
     - multipledispatch
